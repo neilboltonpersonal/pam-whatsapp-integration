@@ -1,16 +1,16 @@
 # Pam on WhatsApp: How We Built It
 
-A phone-first channel for a PM agent. Neil messages Pam from WhatsApp, Pam answers with full access to the auto-PM repo and MCP tools, and pushes urgent items back unprompted.
+A phone-first channel for a PM agent. The user messages the agent 'Pam' from WhatsApp, Pam answers with full access to the connected repo and MCP tools, and pushes urgent items back unprompted.
 
-Built 2 to 3 May 2026. Removed 12 June 2026 when Pam moved fully into Cursor. The code is no longer on `main`. Recover it with `git show e0aed64~1:remote/<file>`.
+Built 2 to 3 May 2026. Removed 12 June 2026 when Pam moved fully into Cursor. The code is no longer maintained.
 
 ## What it did
 
-**Two directions.** Inbound: Neil sends a text or voice note, Pam replies as the same agent that runs in the IDE. Outbound: the hourly pulse sends one consolidated message when something crosses the urgency bar (stakeholder escalation, blocked ticket, deadline within 24 hours, partner Sev1).
+**Two directions.** Inbound: The user sends a text or voice note, Pam replies as the same agent that runs in the IDE. Outbound: the hourly pulse sends one consolidated message when something crosses the urgency bar (stakeholder escalation, blocked ticket, deadline within 24 hours, partner Sev1).
 
 **Quick commands.** "brief me" returned a morning summary. "pulse" returned what changed in the last hour. "status" returned the action tracker summary.
 
-**Queue for the IDE.** Work that needs Neil at a keyboard (canvases, email composition, gated approvals) was written to `remote/cursor-queue.jsonl` and presented at the next Cursor session.
+**Queue for the IDE.** Work that needs the user at a keyboard (canvases, email composition, gated approvals) was written to `remote/cursor-queue.jsonl` and presented at the next Cursor session.
 
 ## Architecture
 
